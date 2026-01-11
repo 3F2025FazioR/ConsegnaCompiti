@@ -1,2 +1,0 @@
-L'istruzione STR1 viene eseguita quando C1 è vero e C2 è falso; invece l'ISTR3 non fa parte del diagramma di flusso,
- quindi non viene eseguita o non dipende dai valori di C1 e C2.
