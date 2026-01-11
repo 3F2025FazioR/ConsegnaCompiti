@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float limite, temp1, temp2, temp3, media;
+
+    printf("Inserisca il valore limite di accensione del riscaldamento in °C: ");
+    scanf("%f", &limite);
+
+    printf("Inserisca le tre temperature registrate: ");
+    scanf("%f %f %f", &temp1, &temp2, &temp3);
+
+    media = (temp1 + temp2 + temp3) / 3.0;
+
+    printf("La media delle temperature è: %.2f°C\n", media);
+
+    if (media < limite) {
+        printf("Quindi il riscaldamento si accenderà a breve.\n");
+    }
+    else {
+        printf("Perciò il riscaldamento NON si accenderà.\n");
+    }
+
+    system("pause");
+    return 0;
+}
