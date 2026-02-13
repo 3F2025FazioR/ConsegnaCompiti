@@ -18,11 +18,14 @@ int main(){
         if(i == 0){
             valoreMax = valore;
             valoreMin = valore;
-        }else{
+        }
+        else{
             if(valore > valoreMax)
                 valoreMax = valore;
+            
             if(valore < valoreMin)
                 valoreMin = valore;
+            
         }
     }
     

@@ -3,6 +3,7 @@
 #include <float.h>
 
 int main() {
+
     FILE *file;
     int numero; 
     int tessera, tesseraSpesaMin;

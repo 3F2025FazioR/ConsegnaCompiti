@@ -1,26 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define CK 1.20
 
-void importo()
-{
+const float CK = 1.2;
+
+void importo() {
     char nome[15];
-    float kmInizio, kmFine, kmPercorsi, importo;
+    float kmInizio, kmFine, kmPercorsi, costo;
 
-    printf("inserire il nome");
-    scanf("%s" , nome);
-    printf("inserire i km iniziali");
-    scanf("%f" , &kmInizio);
-    printf("inserire i km finali");
-    scanf("%f" , &kmFine);
+    printf("Inserire il nome: ");
+    scanf("%s", &nome);
+
+    printf("Inserire i km iniziali: ");
+    scanf("%f", &kmInizio);
+
+    printf("Inserire i km finali: ");
+    scanf("%f", &kmFine);
+
     kmPercorsi = kmFine - kmInizio;
-    importo = kmPercorsi * CK;
-    printf("Gentile Sig. %s deve pagare %f euro\n , nome , importo");
+    
+    costo = kmPercorsi * CK;
+
+    printf("Gentile Sig./Sig.ra %s, deve pagare %.2f euro\n", nome, costo);
 }
 
-int main(int argc, char *argv[]) {
-
+int main() {
     importo();
-    system("pause");
+    system("pause");  
+    
     return 0;
-}
+    }

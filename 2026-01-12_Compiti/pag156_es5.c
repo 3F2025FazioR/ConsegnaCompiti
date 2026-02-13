@@ -2,23 +2,23 @@
 #include <stdlib.h>
 
 int main() {
-    int N;
+    int n;
     int a[100], b[100];
     float media, maxMedia;
     int pos = 0;
 
-    printf("Indicare quanti numeri generare ");
-    scanf("%d", &N);
+    printf("Quante coppie: ");
+    scanf("%d", &n);
 
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < n; i++) {
         a[i] = rand() % 100;
         b[i] = rand() % 100;
-        printf("Coppia %d %d %d\n", i+1, a[i], b[i]);
+        printf("Coppia [%d]: %d %d\n", i+1, a[i], b[i]);
     }
 
     maxMedia = (a[0] + b[0]) / 2.0;
 
-    for (int i = 1; i < N; i++) {
+    for (int i = 1; i < n; i++) {
         media = (a[i] + b[i]) / 2.0;
         if (media > maxMedia) {
             maxMedia = media;
@@ -26,7 +26,7 @@ int main() {
         }
     }
 
-    printf("La coppia con media maggiore e' %d %d\n", a[pos], b[pos]);
+    printf("Coppia con media maggiore: %d %d\n\n7", a[pos], b[pos]);
 
     system("pause");
     return 0;

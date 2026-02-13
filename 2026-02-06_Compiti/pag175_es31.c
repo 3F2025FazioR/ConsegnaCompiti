@@ -43,6 +43,8 @@ int main(){
     
     if(numDomeniche > 0)
         printf("Media vendite domenicali: %.2f copie\n", (float)totDomeniche / numDomeniche);
+    
+    
     system("pause");
     return 0;
 }

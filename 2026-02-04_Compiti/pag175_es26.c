@@ -12,7 +12,7 @@ int main(){
         dispari = dispari + 2;
     }
     
-    printf("Il quadrato di %d è %d\n", n, quadrato);
+    printf("Il quadrato di %d e: %d\n", n, quadrato);
     
     system("pause");
     return 0;

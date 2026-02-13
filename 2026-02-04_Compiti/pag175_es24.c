@@ -4,7 +4,7 @@
 int main(){
     int n, i;
     int iscritti, votanti, nulle, bianche;
-    int totIscritti = 0, totVotanti = 0, totNulle = 0, totBianche = 0;
+    int totIscritti = 0, totVotanti = 0, totNulle = 0, totBianche = 0   ;
     
     printf("Quanti seggi? ");
     scanf("%d", &n);

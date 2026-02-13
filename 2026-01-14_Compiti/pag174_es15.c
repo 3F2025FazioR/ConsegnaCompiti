@@ -8,14 +8,14 @@ int main() {
     int maxIndex = 0;
 
     while (1) {
-        printf("Inserire codice prodotto (0 per terminare) ");
+        printf("Inserisca codice prodotto (0 per terminare): ");
         scanf("%d", &codice[i]);
 
         if (codice[i] == 0) {
             break;
         }
 
-        printf("Inserire prezzo ");
+        printf("Inserisca prezzo: ");
         scanf("%f", &prezzo[i]);
 
         if (i == 0 || prezzo[i] > prezzo[maxIndex]) {
@@ -26,11 +26,11 @@ int main() {
     }
 
     if (i > 0) {
-        printf("\nProdotto più costoso\n");
-        printf("Codice %d\n", codice[maxIndex]);
-        printf("Prezzo %.2f\n", prezzo[maxIndex]);
+        printf("\nProdotto più costoso:\n");
+        printf("Codice: %d\n", codice[maxIndex]);
+        printf("Prezzo: %.2f\n", prezzo[maxIndex]);
     } else {
-        printf("Nessun prodotto generato\n");
+        printf("Nessun prodotto inserito\n");
     }
 
     system("pause");

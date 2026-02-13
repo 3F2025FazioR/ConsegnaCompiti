@@ -20,9 +20,10 @@ int main(){
     } while(condizione == 0);
     
     if(condizione == 1)
-        printf("Terminato perché i due numeri sono uguali\n");
+        printf("Terminato perche i due numeri sono uguali\n");
+    
     else
-        printf("Terminato perché il secondo è maggiore del primo\n");
+        printf("Terminato perche il secondo e maggiore del primo\n");
     
     printf("Coppie inserite: %d\n", coppie);
     

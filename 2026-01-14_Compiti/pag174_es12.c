@@ -6,14 +6,14 @@ int main() {
     int x;
     int maggiore = 0, minore = 0, uguale = 0;
 
-    printf("Indicare quanti numeri generare ");
+    printf("Inserisca quanti numeri vuole inserire[N]: ");
     scanf("%d", &N);
 
-    printf("Indicare un numero da verificare ");
+    printf("Inserisca un numero da verificare [K]: ");
     scanf("%d", &K);
 
     for (int i = 0; i < N; i++) {
-        printf("Inserire un numero ");
+        printf("Inserisca un numero: ");
         scanf("%d", &x);
 
         if (x > K) {
@@ -25,9 +25,9 @@ int main() {
         }
     }
 
-    printf("Numeri maggiori %d\n", maggiore);
-    printf("Numeri minori %d\n", minore);
-    printf("Numeri uguali %d\n", uguale);
+    printf("Numeri maggiori di K: %d\n", maggiore);
+    printf("Numeri minori di K: %d\n", minore);
+    printf("Numeri uguali a K: %d\n", uguale);
 
     system("pause");
     return 0;

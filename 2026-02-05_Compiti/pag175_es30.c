@@ -6,9 +6,12 @@ int main(){
     
     printf("Inserisca il n: ");
     scanf("%d", &n);
+    
     while(termine <= n)
         termine = termine * 2;
-    printf("Il primo termine maggiore di %d è %d\n", n, termine);
+    
+    
+    printf("Il primo termine maggiore di %d e: %d\n", n, termine);
     
     system("pause");
     return 0;

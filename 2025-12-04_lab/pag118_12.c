@@ -2,24 +2,24 @@
 #include <stdlib.h>
 
 int main() {
-    float limite, temp1, temp2, temp3, media;
+    int eta;
 
-    printf("Inserisca il valore limite di accensione del riscaldamento in °C: ");
-    scanf("%f", &limite);
+    printf("Inserisca la tua eta': ");
+    scanf("%d", &eta);
 
-    printf("Inserisca le tre temperature registrate: ");
-    scanf("%f %f %f", &temp1, &temp2, &temp3);
-
-    media = (temp1 + temp2 + temp3) / 3.0;
-
-    printf("La media delle temperature è: %.2f°C\n", media);
-
-    if (media < limite) {
-        printf("Quindi il riscaldamento si accenderà a breve.\n");
+    if (eta >= 21) {
+        printf("Lei puo guidare qualsiasi mezzo di trasporto avebdo la patente.\n");
+    } else if(eta >= 18 ){
+        printf("Puo guidare l'auto fino a 95 cavalli\n");
+    } else if(eta >= 16 ){
+        printf("Puo guidare un motociclo fino a 125 cc\n");
+    } else if (eta >= 14 ){
+        printf("Può guidare uno scooter con cilindrta di 50cc\n");
+    } else {
+        printf("Non puo guidare alcun mezzo di trasporto.\n");
     }
-    else {
-        printf("Perciò il riscaldamento NON si accenderà.\n");
-    }
+
+
 
     system("pause");
     return 0;

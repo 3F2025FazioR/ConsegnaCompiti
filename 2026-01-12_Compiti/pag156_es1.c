@@ -6,14 +6,15 @@ int main() {
     int numeri[100];  
     int min, max;
 
-    printf("Indicare quanti numeri inserire: ");
+    printf("Quanti numeri vuole inserire? ");
     scanf("%d", &n);
+
 
     for (int i = 0; i < n; i++) {
         numeri[i] = rand() % 100;  
         printf("Numero [%d]: %d\n", i+1, numeri[i]);
     }
-
+ 
     min = numeri[0];
     max = numeri[0];
 

@@ -4,7 +4,7 @@
 int main(){
     int numero, precedente;
     int differenza, diffCorrente;
-    int costante = 1, contatore = 0;
+    int costante = 1,contatore = 0;
     
     printf("Inserisca il primo numero: ");
     scanf("%d", &precedente);
@@ -24,8 +24,11 @@ int main(){
         while(numero != 999){
             contatore++;
             diffCorrente = numero - precedente;
+            
             if(diffCorrente != differenza)
                 costante = 0;
+            
+            
             precedente = numero;
             printf("Inserisca un numero (999 per terminare): ");
             scanf("%d", &numero);
@@ -33,9 +36,10 @@ int main(){
     }
     
     if(costante == 1)
-        printf("La differenza è costante\n");
+        printf("La differenza e' costante\n");
+    
     else
-        printf("La differenza NON è costante\n");
+        printf("La differenza NON e' costante\n");
     
     printf("Numeri inseriti: %d\n", contatore);
     

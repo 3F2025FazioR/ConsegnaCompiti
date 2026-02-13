@@ -2,16 +2,17 @@
 #include <stdlib.h>
 
 int main() {
+
     int n;
     int numeri[100];
     int max, min;
 
-    printf("Quanti numeri vuoi generare? ");
+    printf("Quanti numeri? ");
     scanf("%d", &n);
 
     for (int i = 0; i < n; i++) {
-        numeri[i] = rand() % 100;
-        printf("Numero %d: %d\n", i+1, numeri[i]);
+        numeri[i] = rand() % 100;   // da 0 a 99
+        printf("Numero [%d]: %d\n", i+1, numeri[i]);
     }
 
     max = numeri[0];
@@ -24,9 +25,9 @@ int main() {
             min = numeri[i];
     }
 
-    printf("Il valore minimo è: %d\n", min);
-    printf("Il valore massimo è: %d\n", max);
-    printf("La differenza tra massimo e minimo è: %d\n", max - min);
+    printf("Minimo = %d\n", min);
+    printf("Massimo = %d\n", max);
+    printf("Differenza = %d\n", max - min);
 
     system("pause");
     return 0;

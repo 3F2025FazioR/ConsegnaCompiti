@@ -7,9 +7,12 @@ int main(){
     
     printf("Inserisca n (deve essere > 0): ");
     scanf("%d", &n);
+    
     for(int i = 1; i <= n; i++)
         termine = 2 * termine + i;
-    printf("Il termine %d della serie è %d\n", n, termine);
+    
+    
+    printf("Il termine %d della serie e: %d\n", n, termine);
     
     system("pause");
     return 0;
