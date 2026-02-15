@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define N 10 
+#define LS 10
+
+// Ordina in modo crescente il vettore (bubble sort).
+void Ordina( char v[N][LS] ) {
+    char temp[LS];
+    for ( int i = 0; i < N-1; i++ ) {
+        for ( int j = 0; j < N-i-1; j++ ) {
+            if ( strcmp( v[j], v[j+1] ) > 0 ) {
+                strcpy( temp, v[j] );
+                strcpy( v[j], v[j+1] );
+                strcpy( v[j+1], temp );
+            }
+        }
+    }
+}
+
+// ricerca dicotomica se è presente trovv == 1 altrimenti trov == 0
+void Dicotomica(char prov[N][LS], int n, char pr[]) {
+    int trov = 0;
+    int i, inizio = 0;
+    int fine = n - 1;
+    Ordina(prov); //funzione Ordina viene chiamata per ordinare il vettore 
+    while ((trov == 0) && (inizio <= fine)) { 
+        i = ((inizio + fine) / 2);
+        if (strcmp(pr, prov[i]) == 0) {
+            trov = 1;
+        } else {
+            if (strcmp(pr, prov[i]) < 0) {
+                fine = i - 1;
+            } else {
+                inizio = i + 1;
+            }
+        }
+    }
+    if (trov == 0) {
+        printf("Errore - Provincia %s inesistente.\n", pr);
+    } else {
+        printf("La provincia %s è presente.\n", pr);
+    }
+}
+
+int main(int argc, char *argv[]) {
+    char prov[N][LS] = {"To", "Mi", "Ve", "Na", "Ge", "Fi", "Pa", "Ao", "Bo", "Fg"};
+    char pr[LS];
+    printf("Inserisci la sigla della provincia da cercare: ");
+    scanf("%9s", pr);
+    Dicotomica(prov, N, pr);
+    system("pause");
+    return 0;
+}   
