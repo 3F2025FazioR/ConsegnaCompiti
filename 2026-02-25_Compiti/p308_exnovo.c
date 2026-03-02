@@ -4,14 +4,16 @@
 #define m 4
 int totRiga(int M[n][m], int r);
 int totColonna(int M[n][m], int c);
-int totale(int M[n][m])
+int totale(int M[n][m]);
+
+int main(void)
 {
     int mat[n][m]= {{2,3,4,5},{6,7,8,9},{10,11,12,13}};
     int i, j, tot, totr, totc;
     for (i=0; i<n; i++)
     {
             totr=totRiga(mat,i);
-            printf("totale riga %d=%d\n", j+1, totc);
+            printf("totale riga %d=%d\n", i+1, totr);
     }
     for (j=0; j<m; j++)
     {
@@ -24,21 +26,21 @@ int totale(int M[n][m])
     return 0;
 }
 
-int totRiga(int M[n][m], int c)
+int totRiga(int M[n][m], int r)
 {
         int j, tot;
         tot=0;
-        for (j=0; j<n; j++)
-                tot=tot+m[r][j];
+        for (j=0; j<m; j++)
+                tot=tot+M[r][j];
         return tot;
 }
 
-int totColonna(int M[n][m])
+int totColonna(int M[n][m], int c)
 {
     int i, tot;
     tot=0;
     for (i=0; i<n; i++)
-            tot=tot+m[i][c];
+            tot=tot+M[i][c];
     return tot;
 }
 int totale(int M[n][m])
@@ -47,6 +49,6 @@ int totale(int M[n][m])
     tot=0;
     for (i=0; i<n; i++)
             for(j=0; j<m; j++)
-                    tot=tot+m[i][j];
+                    tot=tot+M[i][j];
     return tot;
 }
